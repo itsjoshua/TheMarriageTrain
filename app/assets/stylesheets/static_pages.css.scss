@@ -1,3 +1,155 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+html { 
+  background: url(/assets/vintage.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*
+body {
+background:#dcbcf8;
+background-image:url('images/crump_paper.gif');
+background-repeat:repeat;
+}
+*/
+
+
+#container {
+width:1060px;
+height:1200px;
+margin-left:auto;
+margin-right:auto;
+}
+
+
+#topHalf {
+
+}
+
+#topHalf h1 {
+text-align:center;
+font-family: 'Engagement', cursive;
+font-size:100px;
+color:#9F5F9F;
+}
+
+#topHalf img {
+ display:block;
+ margin:auto;
+}
+
+#mainImage {
+margin-bottom:50px;
+}
+
+.rightShadow {
+-moz-box-shadow: 5px 5px 5px #888;
+-webkit-box-shadow: 5px 5px 5px #888;
+box-shadow: 5px 5px 5px #888;
+}
+
+#clickableDiv {
+height: 200px;
+width:300px;
+margin-left:27px;
+}
+
+
+#bottomHalf {
+margin-top:100px;
+}
+
+#bottomHalf ul {
+list-style-type:none;
+}
+
+#bottomHalf ul li {
+float:left;
+}
+
+.drop-shadow {
+  /* position:relative;
+   width:90%;*/
+    position:relative;
+            float:left;
+            width:40%;
+            padding:1em;
+            margin:2em 10px 4em;
+            background:#fff;
+            -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+               -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.drop-shadow:before,
+.drop-shadow:after {
+   /*content:"";
+   position:absolute;
+   z-index:-1;
+   bottom:10px;
+   left:10px;
+   width:50%;
+   height:20%;
+   max-width:500px;
+   -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   -webkit-transform:rotate(-3deg);
+   -moz-transform:rotate(-3deg);
+   -o-transform:rotate(-3deg);
+   transform:rotate(-3deg);
+   */
+   content:"";
+            position:absolute;
+            z-index:-2;
+}
+
+.drop-shadow:after{
+   right:10px;
+   left:auto;
+   -webkit-transform:rotate(3deg);
+   -moz-transform:rotate(3deg);
+   -o-transform:rotate(3deg);
+   transform:rotate(3deg);
+ }
+ 
+ .lifted {
+            -moz-border-radius:4px;
+                 border-radius:4px;
+        }
+
+        .lifted:before,
+        .lifted:after {
+            bottom:15px;
+            left:10px;
+            width:50%;
+            height:20%;
+            max-width:300px;
+            max-height:100px;
+            -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+               -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+                    box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+            -webkit-transform:rotate(-3deg);
+               -moz-transform:rotate(-3deg);
+                -ms-transform:rotate(-3deg);
+                 -o-transform:rotate(-3deg);
+                    transform:rotate(-3deg);
+        }
+
+        .lifted:after {
+            right:10px;
+            left:auto;
+            -webkit-transform:rotate(3deg);
+               -moz-transform:rotate(3deg);
+                -ms-transform:rotate(3deg);
+                 -o-transform:rotate(3deg);
+                    transform:rotate(3deg);
+        }
+
