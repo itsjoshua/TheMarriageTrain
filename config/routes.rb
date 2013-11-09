@@ -2,10 +2,14 @@ MyWedding::Application.routes.draw do
 
   root 'static_pages#home'
   
-  get "static_pages/home"
-  get "static_pages/story"
-  get "static_pages/invite"
-  get "static_pages/wish"
+  
+  match '/invite', to: 'static_pages#invite', via: 'get'
+  match '/story', to: 'static_pages#story', via: 'get'
+  match '/wish', to: 'static_pages#wish', via: 'get'
+  #get "static_pages/home"
+  #get "static_pages/story"
+  #get "static_pages/invite"
+  #get "static_pages/wish"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
