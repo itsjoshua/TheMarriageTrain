@@ -2,6 +2,7 @@ MyWedding::Application.routes.draw do
 
   root 'static_pages#home'
   
+  resources :guests, only: [:show, :new, :create, :edit, :update, :destroy]
   
   match '/invite', to: 'static_pages#invite', via: 'get'
   match '/story', to: 'static_pages#story', via: 'get'
