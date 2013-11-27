@@ -46,8 +46,26 @@ color:#9F5F9F;
 }
 
 #mainImage {
+margin-top:10px;
 margin-bottom:50px;
 }
+
+#wish_box {
+ background: #CC527A;
+ /*margin-left:auto;
+ margin-right: auto;*/
+ /*margin-top: 40px;*/
+ position: absolute;
+ margin-top: -150px;
+ /*z-index: 10;
+ opacity: 0.7;*/
+}
+
+#wish_box p {
+
+}
+
+
 
 .rightShadow {
 -moz-box-shadow: 5px 5px 5px #888;
@@ -74,6 +92,13 @@ display: inline-block;
 #bottomHalf ul li {
 float:left;
 }
+
+#bottomHalf nav {
+margin-top: 200px;
+margin-left: 280px;
+}
+
+
 
 .drop-shadow {
   /* position:relative;

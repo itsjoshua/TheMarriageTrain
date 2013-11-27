@@ -1,12 +1,17 @@
 <% provide(:title, 'Home') %>
-
 <div id="container">
 <div id="topHalf">
-<h1>My Wedding</h1>
+<h1>Our Wedding</h1>
+
+
 <%= image_tag("home_page_her_and_me.jpg", id: "mainImage", alt: "Her and me", class: "lifted") %>
 </div>
 
 <div id="bottomHalf">
+
+<div id="wish_box">
+</div>
+
 <nav>
 <ul>
 <li><%= link_to "Our Story", story_path, id: "clickableDiv", class: "drop-shadow lifted" %></li>
