@@ -3,19 +3,3 @@
 
 
 <h1>Wedding Wishes</h1>
-
-<div id="wish_form">
-	<%= form_for(@guest) do |f| %>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-		
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-		
-		<%= f.label :wish %>
-		<%= f.text_field :wish %>
-		
-		<%= f.submit "Submit wish" %>
-		
-	<% end %>
-</div>

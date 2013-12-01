@@ -1,7 +1,6 @@
 class GuestsController < ApplicationController
   def new
 	@guest = Guest.new
-	render 'static_pages/wish'
   end
 
   def create

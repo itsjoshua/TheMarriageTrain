@@ -1,0 +1,10 @@
+<% if @guest.errors.any? %>
+		<div id="errors">
+			<h2><%= pluralize(@guest.errors.count, "error") %> prevented your entry being saved </h2>
+			<ul>
+				<% @guest.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+<% end %>

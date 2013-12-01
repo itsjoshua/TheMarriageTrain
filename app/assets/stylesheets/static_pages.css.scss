@@ -5,7 +5,7 @@
 
 
 html { 
-  background: asset-url('vintage.jpg') no-repeat center center fixed; 
+  background: asset-url('abstract-red.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,6 +26,10 @@ width:1060px;
 height:1200px;
 margin-left:auto;
 margin-right:auto;
+}
+
+#container ul {
+list-style-type: none;
 }
 
 
@@ -51,18 +55,37 @@ margin-bottom:50px;
 }
 
 #wish_box {
- background: #CC527A;
+ /*background: #CC527A;*/
  /*margin-left:auto;
  margin-right: auto;*/
  /*margin-top: 40px;*/
- position: absolute;
- margin-top: -150px;
+ position: relative;
+ /*margin-top: -21px;*/
+ width: 50%;
+ margin: 0 auto;
+ height: 100px;
  /*z-index: 10;
  opacity: 0.7;*/
 }
 
-#wish_box p {
+#box_wrapper {
+height: 100px;
+width: 90%;
+margin: 0 auto;
+background: gold;
 
+-moz-border-radius: 15px;
+border-radius: 15px;
+}
+
+#note{
+	color: #666666;
+	font-size: 12px;
+	margin: 0 auto;
+	padding: 4px;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+	width: 400px;
 }
 
 
@@ -96,6 +119,10 @@ float:left;
 #bottomHalf nav {
 margin-top: 200px;
 margin-left: 280px;
+}
+
+#hidden_text {
+display: none;
 }
 
 
