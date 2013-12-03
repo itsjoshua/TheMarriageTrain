@@ -6,6 +6,10 @@ gem 'rails', '4.0.0.rc2'
 
 gem 'pg'
 
+gem 'devise'
+
+gem 'will_paginate', '~> 3.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc2'
 

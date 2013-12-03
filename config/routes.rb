@@ -1,5 +1,6 @@
 MyWedding::Application.routes.draw do
 
+  devise_for :admins, :controllers => { :registrations => "admins/registrations"}
 #  get "guest/new"
 #  get "guest/edit"
 #  get "guest/show"

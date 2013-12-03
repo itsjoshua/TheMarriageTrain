@@ -9,6 +9,13 @@
 </head>
 <body>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<% if admin_signed_in? %>
+	<%= link_to "Sign out", destroy_admin_session_path, :method => :delete, id: "admin_sign_out"%>
+<% else %>
+	<%= link_to "Sign in", new_admin_session_path, id: "admin_sign_in"%>
+<% end %>
 <%= yield %>
 <%= render "shared/footer" %>
 
