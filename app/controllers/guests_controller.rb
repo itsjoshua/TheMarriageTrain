@@ -1,4 +1,7 @@
 class GuestsController < ApplicationController
+
+  before_filter :authenticate_admin!, :only => [:index]
+
   def new
 	@guest = Guest.new
   end
@@ -37,6 +40,10 @@ class GuestsController < ApplicationController
 	#@guest = Guest.find(params[:id])
 	@guest = Guest.first(:order => "RANDOM()")
 	render :partial => 'static_pages/wishbox'
+  end
+  
+  def index
+	@guests = Guest.paginate(:page => params[:page], :per_page => 30)
   end
   
   def guest_params
