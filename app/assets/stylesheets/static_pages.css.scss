@@ -5,7 +5,7 @@
 
 
 html { 
-  background: asset-url('vintage.jpg') no-repeat center center fixed; 
+  background: asset-url('silver-and-red.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -42,11 +42,14 @@ text-align:center;
 font-family: 'Engagement', cursive;
 font-size:100px;
 color:#9F5F9F;
+margin-top: 10px;
+margin-bottom: 30px;
 }
 
 #topHalf img {
  display:block;
- margin:auto;
+ margin-left: auto;
+ margin-right:auto;
 }
 
 #mainImage {
