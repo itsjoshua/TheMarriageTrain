@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.lettering.js
-//= require jquery.textillate.js
 //= require jquery.countdown.js
 //= require_tree .
