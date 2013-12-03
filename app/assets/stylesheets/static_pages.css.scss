@@ -56,27 +56,26 @@ margin-bottom:50px;
 
 #wish_box {
  /*background: #CC527A;*/
- /*margin-left:auto;
- margin-right: auto;*/
- /*margin-top: 40px;*/
- position: relative;
- /*margin-top: -21px;*/
  width: 50%;
  margin: 0 auto;
- height: 100px;
+ /*margin-top: 40px;*/
+ position: relative;
+ vertical-align: middle;
+ text-align: center;
+ display: table;
+ /*width: 100px;*/
+ /*height: 50px;*/
+ background: #CC527A;
  /*z-index: 10;
  opacity: 0.7;*/
 }
 
-#box_wrapper {
-height: 100px;
-width: 90%;
-margin: 0 auto;
-background: gold;
-
--moz-border-radius: 15px;
-border-radius: 15px;
+#wish_box h1 {
+margin: 10px;
+display: table-cell;
+vertical-align: top;
 }
+
 
 #note{
 	color: #666666;
@@ -105,6 +104,7 @@ margin-left:27px;
 
 #bottomHalf {
 margin-top:100px;
+width: 100%;
 }
 
 #bottomHalf ul {

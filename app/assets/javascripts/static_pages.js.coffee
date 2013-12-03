@@ -10,17 +10,12 @@ loadWish = ->
 	$("#hidden_text").load("/guests/wish")
 
 
-invokeTextillate = ->
-	$("#wish_box").replaceWith "<div id=\"wish_box\">" + $("#hidden_text").html() + "</div>"
-	#$("#hidden_text").replaceWith "<div id=\"hidden_text\"></div>"
-	$(".text").textillate
-		minDisplayTime: 3000,
-		in:
-			effect: "bounceIn"
-		out:
-			effect: "hinge"
-	#$("#wish_box").replaceWith "<div id=\"wish_box\"></div>"
-
+invokeAnimate = ->
+	$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated fadeInLeftBig\">" + $("#hidden_text").html() + "</div>"
+	setTimeout (->
+		$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated fadeOutRightBig\">" + $("#hidden_text").html() + "</div>"
+	), 5000
+	
 
 $(window).bind "load", ->
 	$("#countdown").countdown
@@ -37,45 +32,7 @@ $(window).bind "load", ->
 $(document).ready ->
 	loadWish()
 	
-#i = 0
-
-setInterval(invokeTextillate, 8000)
-setInterval(loadWish, 4100)
-
-###
-while i < 5
-	setTimeout (->
-		$("#wish_box").replaceWith "<div id=\"wish_box\">" + $("#hidden_text").html() + "</div>"
-		invokeTextillate()
-		$("#hidden_text").replaceWith "<div id=\"hidden_text\"></div>"
-		), 2000
-	setTimeout (->
-		loadWish()
-		), 3000
-	#$("#wish_box").replaceWith "<div id=\"wish_box\"></div>"
-	#loadWish()
-	i++
-###
-
-
 	
+setInterval(invokeAnimate, 8000)
+setInterval(loadWish, 4500)
 
-#$(window).bind "load", ->
-#	loadWish()
-#	setTimeout (->
-#		invokeTextillate()
-#		), 500
-	
-	
-#$(document).ready ->
-#	$("#wish_box").animate
-#		left: "+=500px"
-#		, "slow", ->
-#			$("#wish_box").fadeOut(50000).delay 5000
-#			myFadeOut()
-
-#myFadeOut = ->
-#	$("#wish_box").animate
-#		left: "+=400px"
-#		, "slow", ->
-#			$("#wish_box").fadeOut 5000
