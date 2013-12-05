@@ -50,8 +50,8 @@ class GuestsController < ApplicationController
 	#Guest.update_all()
 	
 	#Guest.update_all(["approved=?", true], :id => params[:task_ids])
-	#Guest.where(id: params[:approved_guest_ids]).update_all(approved: true)
-	#Guest.where(id: params[:disapproved_guest_ids]).update_all(approved: false)
+	Guest.where(id: params[:approved_guest_ids]).update_all(approved: true)
+	Guest.where(id: params[:disapproved_guest_ids]).update_all(approved: false)
 	redirect_to guests_path
   end
   
