@@ -8,13 +8,16 @@ MyWedding::Application.routes.draw do
 #  get "guest/destroy"
   root 'static_pages#home'
   
-  resources :guests, only: [:show, :index, :new, :create, :edit, :update, :destroy]
+  resources :guests do
+	put 'complete', on: :collection
+  end
   
   match '/invite', to: 'static_pages#invite', via: 'get'
   match '/story', to: 'static_pages#story', via: 'get'
   match '/wish', to: 'static_pages#wish', via: 'get'
   match '/guests/wish', to: 'guests#show', via: 'get'
-  match 'guests/index', to: 'guests#index', via: 'get'
+  #match 'guests/index', to: 'guests#index', via: 'get'
+  #match '/guests/update', to: 'guests#complete', via: 'put'
   #get "static_pages/home"
   #get "static_pages/story"
   #get "static_pages/invite"

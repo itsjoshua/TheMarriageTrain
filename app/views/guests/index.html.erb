@@ -1,8 +1,17 @@
 
 <h1>pagination page</h1>
-<% @guests.each do |guest| %>
-	<% guest.attributes.each_pair do |name, value| %>
-		<h3><%= name %>, <%= value %></h3>
+<%= form_tag complete_guests_path, :method => :put do %>
+<table>
+	<% @guests.each do |guest| %>
+		<tr>
+			<td><%= guest.name %></td>
+			<td><%= guest.email %></td>
+			<td><%= guest.wish %></td>
+			<td><%= check_box_tag "approved_guest_ids[]", guest.id, guest.approved %></td>
+			<td><%= check_box_tag "disapproved_guest_ids[]", guest.id, !guest.approved %></td>
+		</tr>
 	<% end %>
+</table>
+<%= submit_tag "Approve" %>
 <% end %>
 <%= will_paginate @guests %>

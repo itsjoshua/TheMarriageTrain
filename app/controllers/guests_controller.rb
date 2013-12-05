@@ -38,12 +38,21 @@ class GuestsController < ApplicationController
   
   def show
 	#@guest = Guest.find(params[:id])
-	@guest = Guest.first(:order => "RANDOM()")
+	@guest = Guest.where(approved: true).first(:order => "RANDOM()")
 	render :partial => 'static_pages/wishbox'
   end
   
   def index
-	@guests = Guest.paginate(:page => params[:page], :per_page => 30)
+	@guests = Guest.paginate(:page => params[:page], :per_page => 5)
+  end
+  
+  def complete
+	#Guest.update_all()
+	
+	#Guest.update_all(["approved=?", true], :id => params[:task_ids])
+	#Guest.where(id: params[:approved_guest_ids]).update_all(approved: true)
+	#Guest.where(id: params[:disapproved_guest_ids]).update_all(approved: false)
+	redirect_to guests_path
   end
   
   def guest_params
