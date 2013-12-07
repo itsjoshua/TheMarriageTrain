@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery.lettering.js
 //= require jquery.countdown.js
+//= require photobox.js
 //= require_tree .

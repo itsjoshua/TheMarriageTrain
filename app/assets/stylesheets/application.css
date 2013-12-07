@@ -11,5 +11,7 @@
  *= require_self
  *= require animate.css
  *= require jquery.countdown.css
+ *= require photobox.css
+ *= require photobox.ie.css
  *= require_tree .
  */

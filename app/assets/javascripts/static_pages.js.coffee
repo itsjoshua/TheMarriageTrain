@@ -11,9 +11,9 @@ loadWish = ->
 
 
 invokeAnimate = ->
-	$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated fadeInLeftBig\">" + $("#hidden_text").html() + "</div>"
+	$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"red_fade animated fadeInLeftBig\">" + $("#hidden_text").html() + "</div>"
 	setTimeout (->
-		$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated fadeOutRightBig\">" + $("#hidden_text").html() + "</div>"
+		$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"red_fade animated fadeOutRightBig\">" + $("#hidden_text").html() + "</div>"
 	), 5000
 	
 
@@ -28,6 +28,9 @@ $(window).bind "load", ->
 			message += seconds + " second" + ((if seconds is 1 then "" else "s")) + " <br />"
 			message += "left!"
 			note.html message	
+	
+$(window).bind "load", ->
+	$('#gallery').photobox 'a'
 	
 $(document).ready ->
 	loadWish()
