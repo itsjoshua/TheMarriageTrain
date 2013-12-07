@@ -11,4 +11,10 @@ class StaticPagesController < ApplicationController
   def wish
 	redirect_to new_guest_path
   end
+  
+  def pictures
+  end
+  
+  def live
+  end
 end

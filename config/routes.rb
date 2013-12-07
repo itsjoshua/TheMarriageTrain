@@ -15,6 +15,8 @@ MyWedding::Application.routes.draw do
   match '/invite', to: 'static_pages#invite', via: 'get'
   match '/story', to: 'static_pages#story', via: 'get'
   match '/wish', to: 'static_pages#wish', via: 'get'
+  match '/pictures', to: 'static_pages#pictures', via: 'get'
+  match '/live', to: 'static_pages#live', via: 'get'
   match '/guests/wish', to: 'guests#show', via: 'get'
   #match 'guests/index', to: 'guests#index', via: 'get'
   #match '/guests/update', to: 'guests#complete', via: 'put'
