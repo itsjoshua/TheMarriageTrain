@@ -48,9 +48,18 @@ margin-bottom: 30px;
 
 #topHalf img {
  display:block;
- margin-left: auto;
+ /*margin-left: auto;
  margin-right:auto;
+ */
+ float: right;
 }
+
+/*
+#main_image_wrapper {
+width: 75%;
+height: 480px;
+margin: 0 auto;
+}*/
 
 #mainImage {
 margin-top:10px;
