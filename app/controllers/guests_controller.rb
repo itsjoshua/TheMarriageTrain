@@ -9,7 +9,7 @@ class GuestsController < ApplicationController
   def create
 	@guest = Guest.new(guest_params)
 	if @guest.save
-		flash[:success] = "Thank you for your wishes! See your message flash on the home screen"
+		flash[:notice] = "Thank you for your wishes! See your message flash on the home screen"
 		redirect_to root_path
 	else
 		render 'new'
@@ -32,7 +32,7 @@ class GuestsController < ApplicationController
 
   def destroy
 	Guest.find(params[:id]).destroy
-	flash[:success] = "Guest deleted."
+	flash[:notice] = "Guest deleted."
 	redirect_to wish_path
   end
   
