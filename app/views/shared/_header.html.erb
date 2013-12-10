@@ -1,0 +1,22 @@
+
+
+<div id="admin-nav">
+<% if admin_signed_in? %>
+	<%= link_to "Sign out", destroy_admin_session_path, :method => :delete, id: "admin_sign_out"%>
+	<%= link_to "Index", guests_path, id: "admin_index"%>
+<% else %>
+	<%= link_to "Admin", new_admin_session_path, id: "admin_sign_in"%>
+<% end %>
+</div>
+
+<nav>
+<ul>
+<li><%= link_to "Home", root_path, class: "main-nav-link silver-fade" %></li>
+<li><%= link_to "Our Story", story_path, class: "main-nav-link silver-fade" %></li>
+<li><%= link_to "Invitation", invite_path, class: "main-nav-link silver-fade" %></li>
+<li><%= link_to "Pictures", pictures_path, class: "main-nav-link silver-fade" %></li>
+<li><%= link_to "Wishes", wish_path, class: "main-nav-link silver-fade" %></li>
+<li><%= link_to "Live", live_path, class: "main-nav-link silver-fade" %></li>
+</ul>
+</nav>
+

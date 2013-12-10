@@ -1,17 +1,19 @@
 
-<div id="wish_form">
-	<%= form_for(@guest) do |f| %>
-		<%= render "shared/error_messages" %>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-		<br>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-		<br>
-		<%= f.label :wish %>
-		<%= f.text_field :wish %>
-		<br>
-		<%= f.submit "Submit wish" %>
-		
-	<% end %>
+<div id="container">
+<div id="message_form_wrapper">
+<%= form_for(@guest) do |f| %>
+	<%= render "shared/error_messages" %>
+	<%= f.label :name, class: "form_element" %>
+	<%= f.text_field :name, class: "form_element" %>
+	<br>
+	<%= f.label :email, class: "form_element" %>
+	<%= f.text_field :email, class: "form_element" %>
+	<br>
+	<%= f.label :wish, class: "form_element" %>
+	<%= f.text_area :wish, rows: "5", columns: "40", class: "form_element" %>
+	<br>
+	<%= f.submit "Submit wish" %>
+	
+<% end %>
+</div>
 </div>
