@@ -11,10 +11,11 @@ loadWish = ->
 
 
 invokeAnimate = ->
-	$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated fadeIn\">" + $("#hidden_text").html() + "</div>"
+	wish = $("#hidden_text").html()
+	$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated fadeIn\">" + wish + "</div>"
 	setTimeout (->
-		$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated hinge\">" + $("#hidden_text").html() + "</div>"
-	), 5000
+		$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated hinge\">" + wish + "</div>"
+	), 7000
 	
 
 $(window).bind "load", ->
@@ -34,9 +35,19 @@ $(window).bind "load", ->
 	
 $(document).ready ->
 	loadWish()
+	setTimeout (->
+		invokeAnimate()
+	), 1000
+	
+$(document).ready ->
+	$("#flash").css("visibility:visible").fadeIn 6000, ->
+		$("#flash").fadeOut 2000
 	
 	
-setInterval(loadWish, 13500)
-setInterval(invokeAnimate, 7000)
+setInterval(loadWish, 7000)
+setInterval(invokeAnimate, 9000)
+
+
+
 
 
