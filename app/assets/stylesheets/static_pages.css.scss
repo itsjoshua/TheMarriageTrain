@@ -191,7 +191,6 @@ margin-right: auto;
 }
 
 .form_element {
-font-size: 15px;
 font-weight: bold;
 color: #991F00;
 display: inline;
@@ -205,6 +204,7 @@ padding-top: 20px;
 padding-bottom: 20px;
 }
 
+/*
 #message_form_wrapper input, textarea {
  outline: none;
  transition: all 0.25s ease-in-out;
@@ -214,14 +214,60 @@ padding-bottom: 20px;
  -webkit-border-radius: 3px;
  -moz-border-radius: 3px;
  border: 1px solid rgba(0, 0, 0, 0.2);
- background: #C0C0C0;
+ background: transparent;
 }
+
 
 #message_form_wrapper input:focus, textarea:focus {
  box-shadow: 0 0 5px rgba(194, 47, 37, 1);
  -webkit-box-shadow: 0 0 5px rgba(194, 47, 37, 1);
  -moz-box-shadow: 0 0 5px rgba(194, 47, 37, 1);
  border: 1px solid rgba(194, 47, 37, 0.8);
+}
+*/
+
+#message_form_wrapper input {
+ border: none;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+ -webkit-box-shadow: 0 0 5px #666 inset;
+ -moz-box-shadow: 0 0 5px #666 inset;
+ box-shadow: 0 0 5px #666 inset;
+ height: 25px;
+ line-height: 25px;
+ width: 200px;
+ text-indent: 5px;
+ 
+}
+
+#message_form_wrapper textarea {
+ border: none;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+ -webkit-box-shadow: 0 0 5px #666 inset;
+ -moz-box-shadow: 0 0 5px #666 inset;
+ box-shadow: 0 0 5px #666 inset;
+ height: 75px;
+ width: 200px;
+ text-indent: 5px;
+ }
+ 
+
+ 
+ #message_form_wrapper input.button {
+  width: 100px;
+  float: right;
+  margin-right: 500px;
+ }
+
+#message_form_wrapper h4 {
+ padding: 2px 2px 2px;
+ margin: 2px 2px 2px;
+ font-family: 'Maiden Orange', cursive; 
+ font-size: 17px;
+ color:#6d0019;
 }
 
 #errors {

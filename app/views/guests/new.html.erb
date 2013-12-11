@@ -3,16 +3,13 @@
 <div id="message_form_wrapper">
 <%= form_for(@guest) do |f| %>
 	<%= render "shared/error_messages" %>
-	<%= f.label :name, class: "form_element" %>
-	<%= f.text_field :name, class: "form_element" %>
-	<br>
-	<%= f.label :email, class: "form_element" %>
-	<%= f.text_field :email, class: "form_element" %>
-	<br>
-	<%= f.label :wish, class: "form_element" %>
+	<h4 class: "form_element">Name*: </h3>
+	<%= f.text_field :name, class: "form_element"%>
+	<h4 class: "form_element">Email*: </h3>
+	<%= f.email_field :email, class: "form_element"%>
+	<h4 class: "form_element">Message*: </h3>
 	<%= f.text_area :wish, rows: "5", columns: "40", class: "form_element" %>
-	<br>
-	<%= f.submit "Send Message" %>
+	<%= f.submit "Send Message", class: "button", id: "form_submit"  %>
 <% end %>
 </div>
 <div id="message_info">

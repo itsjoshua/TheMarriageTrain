@@ -39,9 +39,7 @@ $(document).ready ->
 		invokeAnimate()
 	), 1000
 	
-$(document).ready ->
-	$("#flash").css("visibility:visible").fadeIn 6000, ->
-		$("#flash").fadeOut 2000
+
 	
 	
 setInterval(loadWish, 7000)
