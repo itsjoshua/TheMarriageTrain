@@ -3,9 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-note = $("#note")
-timeStamp = (new Date(2014, 0, 4)).getTime()
-
 loadWish = ->
 	$("#hidden_text").load("/guests/wish")
 
@@ -17,8 +14,10 @@ invokeAnimate = ->
 		$("#wish_box").replaceWith "<div id=\"wish_box\" class=\"animated hinge\">" + wish + "</div>"
 	), 7000
 	
+note = $("#note")
+timeStamp = (new Date(2014, 0, 4)).getTime()
 
-$(window).bind "load", ->
+$(document).ready ->
 	$("#countdown").countdown
 		timestamp: timeStamp
 		callback: (days, hours, minutes, seconds) ->
@@ -28,8 +27,8 @@ $(window).bind "load", ->
 			message += minutes + " minute" + ((if minutes is 1 then "" else "s")) + " and "
 			message += seconds + " second" + ((if seconds is 1 then "" else "s")) + " <br />"
 			message += "left!"
-			note.html message	
-	
+			note.html message
+		
 $(window).bind "load", ->
 	$('#gallery').photobox 'a'
 	
