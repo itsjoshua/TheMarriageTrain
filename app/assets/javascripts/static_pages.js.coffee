@@ -15,7 +15,7 @@ invokeAnimate = ->
 	), 7000
 	
 note = $("#note")
-timeStamp = (new Date(2014, 0, 4)).getTime()
+timeStamp = (new Date(2014, 0, 4)).getTime() + (17*60 + 30)*60*1000;
 
 $(document).ready ->
 	$("#countdown").countdown
